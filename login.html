@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+</head>
+<form>
+    <input type="text" placeholder="Nhập tên" id="id_1" >
+    <input type="button" id="id_2" value="Login" onclick="n()">
+</form>
+<body>
+<script>
+    function n() {
+        let name = (document.getElementById("id_1").value)
+
+        if (name === "Admin") {let pass = prompt("Nhập password");
+        if (pass == "TheMaster") {
+            alert('Welcome!');
+        } else {
+            if (pass === "") {alert("Canceled");}
+            else {if (pass !== "TheMaster") {
+                alert("Wrong password");
+            }}
+        }
+        }
+            else { if (name === "")
+            {alert("Canceled");}
+            else {if (name !== "Admin") {
+            alert("I don’t know you");
+        }}
+
+
+
+
+        }
+
+
+        
+    }
+</script>
+</body>
+</html>
