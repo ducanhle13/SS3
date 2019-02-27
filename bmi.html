@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chỉ số khối cơ thể</title>
+    <h2>Tính chỉ số khối cơ thể</h2>
+</head>
+<body>
+<form>
+    <input type="text" placeholder="Nhập cân nặng (kg)" id="kg">
+    <input type="text" placeholder="Nhập chiều cao (m)" id="cc">
+    <input type="button" id="id_tinh" value="Tính" onclick="ti()">
+
+    <br>
+    <br>
+    Chỉ số BMI của bạn ở mức: <output type="text" id="kq">
+    <br>
+</form>
+<script>
+function ti() {
+    let kg = parseFloat(document.getElementById("kg").value);
+    let cc = parseFloat(document.getElementById("cc").value);
+    let kq = kg / (cc * cc);
+    //document.getElementById("kq").value = kq;
+
+    if (kq < 18)
+        document.getElementById("kq").value = "Underweight";
+    else if (kq < 25.0)
+        document.getElementById("kq").value = "Normal";
+    else if (kq < 30.0)
+        document.getElementById("kq").value = "Overweight";
+    else
+        document.getElementById("kq").value = "Obese";
+}
+</script>
+</body>
+</html>
